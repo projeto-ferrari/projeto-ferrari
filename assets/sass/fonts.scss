@@ -7,16 +7,16 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+    src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 @font-face {

@@ -3,15 +3,15 @@ header {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width:100%;
+        width: 100%;
         h1, h2, h3, h4, h5, h6 {
             color: var(--green);
-            margin:0;
-            font-size: 32px;
+            margin: 0;
+            font-size: 23px;
             font-weight: 600;
         }
         hr {
-            width: 68px;
+            width:68px;
             border: none;
             border-top: 4px solid var(--red);
             margin: 10px 0;
@@ -19,13 +19,12 @@ header {
     }
 }
 
-.page  {
+.page {
     flex-direction: column;
     height: calc(100vh - 140px);
     overflow: auto;
-   
     .page-title {
-        margin: var(--space) ;
+        margin: var(--space);
         width: calc(100% - calc(var(--space) * 2));
     }
     > header {
@@ -36,25 +35,23 @@ header {
         justify-content: center;
         align-items: center;
         margin-top: 18px;
-        h1{
-            font-size:23px;
+        h1 {
+            font-size: 23px;
             font-weight: bold;
             text-transform: uppercase;
-            
         }
-
     }
     > main {
-        flex-direction: column;
         margin-bottom: 80px;
+        flex-direction: column;
         .toast {
             position: fixed;
-            bottom:0;
-            left:0;
-            z-index:3;
-           &.open {
-               transform: translateY(-80px);
-           }
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+            &.open {
+                transform: translateY(-80px);
+            }
         }
     }
     footer.fixed {
@@ -63,11 +60,11 @@ header {
         bottom: 0;
         background-color: var(--gray-12);
         height: 80px;
-        left:0;
+        left: 0;
         justify-content: space-between;
         align-items: center;
         padding: var(--space);
-        z-index:4;
+        z-index: 4;
         button, a {
             @include button-gray;
         }
@@ -81,45 +78,50 @@ header {
         }
         footer.fixed {
             button[type=submit], a.black {
-                    @include button-blue;
-                }
+                @include button-blue;
+            } 
         }
+    }
     &.green {
         > header {
             background-color: var(--green);
         }
         footer.fixed {
             button[type=submit], a.black {
-                    @include button-green;
-                }
+                @include button-green;
+            } 
         }
-       
     }
 }
 
 @media (min-width: 1200px) {
+    header {
+        &.page-title {
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 30px;
+            }
+        }
+    }
     .page {
         > header {
             justify-content: flex-start;
             padding-left: 185px;
+            min-height: 160px;
             h1 {
                 font-size: 32px;
-
             }
         }
-
         footer.fixed {
             justify-content: flex-start;
             button + button, a + a, button + a, a + button {
                 margin-right: var(--space);
             }
             button, a {
-                order:1;
+                order: 1;
                 &:first-child {
                     order: 2;
                 }
             }
         }
     }
-}
 }

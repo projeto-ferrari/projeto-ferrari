@@ -1,55 +1,55 @@
 #header {
-    min-width:320px;
-    width:100%;
+    min-width: 320px;
+    width: 100%;
     height: 60px;
     background-color: var(--gray-5);
     position: relative;
-    z-index:3;
-    .italy{
-        width:100%;
+    z-index: 5;
+    .italy {
+        width: 100%;
         position: absolute;
-        top:60px;
+        top: 60px;
         background-color: var(--white);
-        border:none;
-        border-top:var(--green) 6px solid;
+        border: none;
+        border-top: var(--green) 6px solid;
         border-bottom: var(--red) 6px solid;
-        height:18px;
-        margin:0;
+        height: 18px;
+        margin: 0;
     }
     .logo {
         position: absolute;
         transition: all 1s ease-in-out;
         top: 15px;
-        width:72px;
+        width: 72px;
         right: calc(50vw - 36px);
-        z-index: 5;
+        z-index: 7;
     }
     .menu {
         transition: right .5s ease-in-out;
-        width:300px;
+        width: 300px;
         height: 100vh;
         padding-bottom: 50px;
         background-color: var(--gray-7);
         position: fixed;
         right: -300px;
-        top:0;
-        z-index:4;
+        top: 0;
+        z-index: 6;
         flex-direction: column;
         justify-content: space-between;
         hr {
-            width:100%;
-            border-bottom:none;
+            width: 100%;
+            border-bottom: none;
             border-color: var(--black-10);
             margin: 0;
         }
         &.logged {
-            nav{
-                ul{
-                    li{
-                        &.divider{
+            nav {
+                ul {
+                    li {
+                        &.divider {
                             display: flex;
                         }
-                        &.hide-guest{
+                        &.hide-guest {
                             display: flex;
                         }
                     }
@@ -64,39 +64,41 @@
                 }
             }
         }
-        nav{
+        nav {
             flex-direction: column;
-            ul{
-                margin:0;
-                margin-top:249px;
-                width:100%;
+            ul {
+                margin: 0;
+                padding: 0;
+                width: 100%;
                 flex-direction: column;
-                padding:0;
-                li{
+                margin-top: 169px;
+                max-height: calc(100vh - 250px);
+                overflow-y: auto;
+                li {
                     padding: 14px 0;
                     list-style: none;
                     justify-content: center;
-                    a{
+                    a {
                         text-decoration: none;
                         color: var(--gray-0);
                     }
                     &.hide-guest, &.divider {
-                            display:none;
-                        }
+                        display: none;
+                    }
                     hr {
-                            margin:15px 0;
-                        }
-                    
+                        margin: 15px 0;
+                    }
                 }
             }
         }
-        .footer{
+        .footer {
             flex-direction: column;
             align-items: center;
             width: 100%;
             > div {
-                display:none;
+                display: none;
                 padding: 15px;
+                width: 100%;
                 align-items: center;
                 picture {
                     margin-right: 10px;
@@ -108,23 +110,23 @@
                 }
                 > div {
                     flex-direction: column;
-                    flex:1;
+                    flex: 1;
                 }
-                a{
+                a {
                     color: var(--dark-0);
                     text-decoration: none;
                     font-size: 16px;
-                    small{
+                    small {
                         color: var(--gray-2);
-                        font-size:12px;
+                        font-size: 12px;
                     }
                 }
             }
         }
-        .btn-register{
-            margin:20px;
-            width:calc(300px - 40px);
-           @include button-green;
+        .btn-register {
+            margin: 20px;
+            width: calc(300px - 40px);
+            @include button-green;
         }
     }
     button {
@@ -133,54 +135,51 @@
         outline: none;
         padding: 13px;
     }
-    #btn-open, #btn-close{
+    #btn-open, #btn-close {
         position: absolute;
-        right:0;
+        right: 0;
     }
+
 }
 .open-menu {
     overflow: hidden;
     #header {
         .overlay {
             position: fixed;
-            top:0;
-            left:0;
-            width:100vh;
-            height:100vh;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background-color: var(--dark-1);
-            z-index:4;
+            z-index: 5;
         }
-    .menu {
+        .menu {
             right: 0;
         }
-    .logo {
+        .logo {
             right: 87px;
-            width:120px;
+            width: 120px;
         }
     }
-
 }
 
-@media (min-width:1200px){
+@media (min-width: 1200px) {
     .open-menu {
         overflow: initial;
         #header {
             .overlay {
-                display:none;
+                display: none;
             }
             .logo {
-                width:100px;
-                top:17px;
+                width: 100px;
+                top: 17px;
                 right: calc(100vw - 150px);
-            }
-            #btn-open, #btn-close {
-                display: none;
             }
         }
     }
     #header {
         height: 100px;
-        .italy{
+        .italy {
             top: 100px;
         }
         .logo {
@@ -203,19 +202,19 @@
             align-items: center;
             padding-bottom: 0;
             .btn-register {
-                margin:0;
+                margin: 0;
                 margin-right: 30px;
-                width:200px;
+                width: 200px;
             }
             nav {
-                width:100%;
+                width: 100%;
                 ul {
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
                     margin-top: 0;
                     li {
-                        a{
+                        a {
                             font-size: 18px;
                             min-width: 120px;
                             padding: 10px 0;
@@ -228,7 +227,7 @@
                 }
             }
             .footer {
-                width:initial;
+                width: initial;
                 justify-content: center;
                 hr {
                     display: none;

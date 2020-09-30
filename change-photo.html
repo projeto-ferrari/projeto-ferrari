@@ -74,52 +74,29 @@
         <hr class="italy" />
     </header>
 
-    <section class="page" id="profile">
+    <section class="page" id="change-photo">
         
         <header>
-            <h1>Editar Dados</h1>
+            <h1>Mudar Foto</h1>
         </header>
 
         <main>
 
-            <header class="page-title">
-                <h2>Dados Pessoais</h2>
-                <hr />
-            </header>
-
             <form>
 
-                <div class="field">
-                    <input type="text" name="name" id="name" value="Djalma" />
-                    <label for="name">Nome Completo</label>
-                </div>
+                <img src="assets/images/user@4x.png" alt="Foto Atual" id="photo-preview" />
 
-                <div class="field">
-                    <input type="email" name="email" id="email" />
-                    <label for="email">E-mail</label>
-                </div>
+                <input type="file" name="photo" id="file">
 
-                <div class="field">
-                    <input type="date" name="birth_at" id="birth_at" />
-                    <label for="birth_at">Data de Nascimento</label>
-                </div>
+                <input type="hidden" name="x" />
+                <input type="hidden" name="y" />
+                <input type="hidden" name="width" />
+                <input type="hidden" name="height" />
 
-                <div class="fields">
-
-                    <div class="field">
-                        <input type="text" name="document" id="document" />
-                        <label for="document">Documento</label>
-                    </div>
-
-                    <div class="field">
-                        <input type="tel" name="phone" id="phone" />
-                        <label for="phone">Telefone</label>
-                    </div>
-
-                </div>
+                <button type="button" class="choose-photo">Escolher Foto</button>
 
                 <div class="toast success open">
-                    Dados salvos com sucesso!
+                    Foto alterada com sucesso!
                     <button type="button" class="close">
                         <span>&times;</span>
                     </button>
