@@ -74,62 +74,48 @@
         <hr class="italy" />
     </header>
 
-   <section id="schedules-services" class="page blue">
+   <section id="resume" class="page blue">
 
         <header>
-            <h1>Escolha os serviços</h1>
+            <h1>Resumo do Pedido <small>Confira os detalhes do pedido</small></h1>
+           
         </header>
 
-        <main>
+        <main >
+           <form action="">
 
-            <form action="schedules-payment.html">
-
-                <div class="options">
-
-                    <label>
-                        <input type="checkbox" name="service" value="1" checked />
-                        <div class="square">
-                            <div></div>
-                        </div>
-                        <div class="content">
-                            <span class="name">Revisão</span>
-                            <span class="description">Verificação mínima necessária</span>
-                            <span class="price">R$100,00</span>
-                        </div>
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="service" value="2"checked/>
-                        <div class="square">
-                            <div></div>
-                        </div>
-                        <div class="content">
-                            <span class="name">Alinhamento</span>
-                            <span class="description">Alinhamento e balanceamento</span>
-                            <span class="price">R$400,00</span>
-                        </div>
-                    </label>
-                    <label>
-                        <input type="checkbox" name="service" value="3"/>
-                        <div class="square">
-                            <div></div>
-                        </div>
-                        <div class="content">
-                            <span class="name">Filtros</span>
-                            <span class="description">Troca de filtro de ar e combustível</span>
-                            <span class="price">R$200,00</span>
-                        </div>
-                    </label>
-
+                <div class="field">
+                    <input type="text" name="payment" id="payment" readonly value="Cartão de Crédito" />
+                    <label for="payment">Forma de Pagamento</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="credicard" id="credicard" readonly value="***0604" />
+                    <label for="credicard">Cartão Final</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="installments" id="installments" readonly value="À vista" />
+                    <label for="installments">Parcelas à Vista</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="services" id="services" readonly value="1" />
+                    <label for="services">Quantidade de Serviços</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="schedule-at" id="schedule-at" readonly value="01 de outubro de 2020 às 9:00" />
+                    <label for="schedule-at">Data do Serviço</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="total" id="total" readonly value="R$ 400,00" />
+                    <label for="total">Valor Total</label>
                 </div>
 
-                <footer class="fixed">
-                    <a href="schedules-time-options.html">Voltar</a>
-                    <button type="submit">Continuar</button>
-                </footer>
 
-            </form>
+           </form>
 
+            <footer class="fixed">
+                <a href="schedules-payment.html">Voltar</a>
+                <button type="submit">Confirmar</button>
+            </footer>
 
         </main>
 
@@ -196,6 +182,7 @@
 
         </aside>
 
+      
 
    </section>
 
