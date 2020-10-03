@@ -1229,6 +1229,18 @@ header.page-title hr {
   #home .gallery {
     flex-direction: row;
   }
+  #home > header ul {
+    display: flex;
+    color: var(--white);
+    font-size: 30px;
+    margin: 0;
+  }
+  #home > header ul li {
+    margin-left: calc(2 * var(--space));
+  }
+  #home > header h1 {
+    margin-top: unset;
+  }
 }
 @media (min-width: 1200px) {
   #home {
@@ -1909,7 +1921,7 @@ header.page-title hr {
   max-width: 100%;
 }
 #schedules-payment > main form .form-creditcard {
-  margi-top: var(--space);
+  margin-top: var(--space);
 }
 #schedules-payment > main form .form-creditcard .form-fields {
   flex-direction: column;
@@ -1948,6 +1960,108 @@ header.page-title hr {
 }
 #schedules-payment > main form .form-creditcard .form-card .faces .back {
   transform: rotateY(180deg);
+}
+
+@media (min-width: 1200px) {
+  #schedules-payment {
+    position: static;
+  }
+  #schedules-payment > header {
+    height: 160px;
+    min-height: 160px;
+  }
+  #schedules-payment > header h1 {
+    display: block;
+  }
+  #schedules-payment main {
+    align-items: flex-start;
+  }
+  #schedules-payment main form {
+    max-width: 900px;
+    justify-content: space-between;
+    margin-top: var(--space);
+  }
+  #schedules-payment main form .form-creditcard .form-card {
+    position: static;
+    justify-content: center;
+    padding: var(--space);
+  }
+  #schedules-payment main form .form-creditcard .form-card .faces {
+    width: 100%;
+    margin-top: -38px;
+  }
+  #schedules-payment main form .form-creditcard .form-card .faces.flipped {
+    transform: translateX(-60px) rotateY(180deg);
+  }
+  #schedules-payment main form .form-creditcard .form-card .faces svg {
+    width: 340px;
+  }
+}
+#payment-done main section {
+  flex-direction: column;
+}
+#payment-done main section header {
+  margin-top: 0;
+  margin-top: var(--space);
+  margin-bottom: 0;
+}
+#payment-done main section > div {
+  flex-direction: column;
+  padding: var(--space);
+}
+#payment-done main section > div span {
+  margin-bottom: var(--space);
+  color: var(--gray-0);
+  font-size: 22px;
+}
+#payment-done main section > div span.last-child {
+  margin-bottom: 0;
+}
+#payment-done main section > div span small {
+  margin: 0;
+}
+#payment-done main footer {
+  justify-content: center;
+}
+#payment-done main footer a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+}
+#payment-done main footer a:hover {
+  background-color: var(--black-10);
+}
+#payment-done main footer a:active {
+  background-color: var(--black-75);
+}
+#payment-done main footer a:hover {
+  background-color: var(--green-hover);
+}
+#payment-done main footer a:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 1200px) {
+  #payment-done main section > div small {
+    display: block;
+  }
+  #payment-done main section footer {
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

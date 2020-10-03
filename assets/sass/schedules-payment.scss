@@ -13,7 +13,7 @@
         form {
             max-width:100%;
             .form-creditcard {
-                margi-top: var(--space);
+                margin-top: var(--space);
                 .form-fields {
                     flex-direction: column;
                     width:100%;
@@ -51,6 +51,45 @@
                         }
                         .back {
                             transform: rotateY(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #schedules-payment {
+        position: static;
+        > header {
+            height: 160px;
+            min-height: 160px;
+            h1 {
+                display: block;
+            }
+        }
+        main {
+            align-items: flex-start;
+            
+            form {
+                max-width: 900px;
+                justify-content: space-between;
+                margin-top: var(--space);
+                .form-creditcard{
+                    .form-card{
+                        position: static;
+                        justify-content: center;
+                        padding: var(--space);
+                        .faces {
+                            width: 100%;
+                            margin-top: -38px;
+                            &.flipped {
+                            transform: translateX(-60px) rotateY(180deg);
+                            }
+                            svg {
+                                width:340px;
+                            }
                         }
                     }
                 }
